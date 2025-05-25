@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM BREACH DETECTED</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glitch {
+            position: relative;
+            animation: glitch 5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #00ffea, -0.05em -0.025em 0 #ff00f2; }
+            14% { text-shadow: 0.05em 0 0 #00ffea, -0.05em -0.025em 0 #ff00f2; }
+            15% { text-shadow: -0.05em -0.025em 0 #00ffea, 0.025em 0.025em 0 #ff00f2; }
+            49% { text-shadow: -0.05em -0.025em 0 #00ffea, 0.025em 0.025em 0 #ff00f2; }
+            50% { text-shadow: 0.025em 0.05em 0 #00ffea, 0.05em 0 0 #ff00f2; }
+            99% { text-shadow: 0.025em 0.05em 0 #00ffea, 0.05em 0 0 #ff00f2; }
+            100% { text-shadow: -0.025em 0 0 #00ffea, -0.025em -0.025em 0 #ff00f2; }
+        }
+
+        .terminal {
+            border: 1px solid #0f0;
+            padding: 20px;
+            margin-top: 20px;
+            height: 300px;
+            overflow-y: scroll;
+            box-shadow: 0 0 10px #0f0;
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .error {
+            color: #f00;
+            text-shadow: 0 0 5px #f00;
+        }
+
+        .warning {
+            color: #ff0;
+            text-shadow: 0 0 5px #ff0;
+        }
+
+        .success {
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #111;
+            height: 20px;
+            margin: 10px 0;
+            border: 1px solid #0f0;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #0f0;
+            width: 0%;
+            animation: progress 5s linear infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 100%; }
+            100% { width: 0%; }
+        }
+
+        .access-denied {
+            font-size: 3em;
+            text-align: center;
+            margin-top: 50px;
+            animation: deny 2s infinite;
+        }
+
+        @keyframes deny {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .hacker-id {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: 1px solid #0f0;
+            padding: 10px;
+            box-shadow: 0 0 10px #0f0;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .socials {
+            margin-top: 10px;
+            border-top: 1px dashed #0f0;
+            padding-top: 10px;
+        }
+
+        .socials a {
+            color: #0f0;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        .socials a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+        }
+
+        .signature {
+            color: #f0f;
+            text-shadow: 0 0 5px #f0f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix" class="matrix"></canvas>
+
+    <h1 class="glitch">>_ SITE WAS HACKED <span class="blink">_</span></h1>
+    
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="terminal">
+        <p>> Initializing breach protocol...</p>
+        <p>> Bypassing security measures...</p>
+        <p class="warning">! Warning: Firewall compromised</p>
+        <p>> Accessing root directories...</p>
+        <p>> Downloading sensitive data: <span id="data">0%</span></p>
+        <p class="error">! Critical: Intrusion detection activated</p>
+        <p>> Deploying countermeasures...</p>
+        <p>> Establishing backdoor connection...</p>
+        <p>> Overwriting system logs...</p>
+        <p class="error">! Error: Connection unstable</p>
+        <p>> Re-routing through proxy servers...</p>
+        <p>> Encryption keys acquired...</p>
+        <p>> Uploading payload...</p>
+        <p class="warning">! Warning: Admin privileges obtained</p>
+        <p class="success">> SYSTEM COMPROMISED</p>
+        <p>> Leaving signature...</p>
+        <p class="signature">[ LETCHUPKT WAS HERE ]</p>
+    </div>
+
+    <div class="access-denied error">
+        ACCESS DENIED
+    </div>
+
+    <div class="hacker-id">
+        <div>> HACKER IDENTIFIED:</div>
+        <div class="glitch">LETCHUPKT</div>
+        <div class="socials">
+            <a href="https://github.com/letchupkt" target="_blank">>_ github.com/letchupkt</a>
+            <a href="https://twitter.com/LetchuPkt" target="_blank">>_ twitter.com/LetchuPkt</a>
+            <a href="https://instagram.com/letchu_pkt" target="_blank">>_ instagram.com/letchu_pkt</a>
+            <a href="https://linkedin.com/in/lakshmikanthank" target="_blank">>_ linkedin.com/in/lakshmikanthank</a>
+            <a href="mailto:lakshmikanthan2006@gmail.com">>_ lakshmikanthan2006@gmail.com</a>
+        </div>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+        const alphabet = katakana + latin + nums + symbols;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+
+        // Data download counter
+        let percent = 0;
+        const dataElement = document.getElementById('data');
+        const counter = setInterval(() => {
+            percent += Math.floor(Math.random() * 10);
+            if (percent >= 100) {
+                percent = 100;
+                clearInterval(counter);
+            }
+            dataElement.textContent = percent + '%';
+        }, 300);
+
+        // Resize canvas when window resizes
+        window.addEventListener('resize', () => {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        });
+
+        // Random glitch effect
+        setInterval(() => {
+            document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+            setTimeout(() => {
+                document.body.style.filter = '';
+            }, 100);
+        }, 5000);
+
+        // Typewriter effect for terminal
+        const terminal = document.querySelector('.terminal');
+        const originalLines = Array.from(terminal.children).map(p => p.innerHTML);
+        
+        terminal.innerHTML = '';
+        let lineIndex = 0;
+        let charIndex = 0;
+        let typingInterval = setInterval(typeLine, 50);
+
+        function typeLine() {
+            if (lineIndex >= originalLines.length) {
+                clearInterval(typingInterval);
+                return;
+            }
+
+            if (charIndex < originalLines[lineIndex].length) {
+                terminal.innerHTML += originalLines[lineIndex].charAt(charIndex);
+                charIndex++;
+                terminal.scrollTop = terminal.scrollHeight;
+            } else {
+                terminal.innerHTML += '<br>';
+                lineIndex++;
+                charIndex = 0;
+            }
+        }
+    </script>
+</body>
+</html>
